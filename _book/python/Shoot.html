@@ -1,0 +1,667 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>开枪类的使用 · felix</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        <meta name="identifier" content="felix" scheme="ISBN">
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Class.html" />
+    
+    
+    <link rel="prev" href="scrapy.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../linux/">
+            
+                <a href="../linux/">
+            
+                    
+                    Linux部分笔记
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../linux/linux.html">
+            
+                <a href="../linux/linux.html">
+            
+                    
+                    linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../linux/server.html">
+            
+                <a href="../linux/server.html">
+            
+                    
+                    server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../linux/shell.html">
+            
+                <a href="../linux/shell.html">
+            
+                    
+                    shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../linux/nginx.html">
+            
+                <a href="../linux/nginx.html">
+            
+                    
+                    nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../linux/iptable.html">
+            
+                <a href="../linux/iptable.html">
+            
+                    
+                    iptable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../linux/ansible.html">
+            
+                <a href="../linux/ansible.html">
+            
+                    
+                    ansible
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../linux/proxy.html">
+            
+                <a href="../linux/proxy.html">
+            
+                    
+                    proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../linux/docker.html">
+            
+                <a href="../linux/docker.html">
+            
+                    
+                    docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    python部分笔记
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="python.html">
+            
+                <a href="python.html">
+            
+                    
+                    python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="scrapy.html">
+            
+                <a href="scrapy.html">
+            
+                    
+                    scrapy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="Shoot.html">
+            
+                <a href="Shoot.html">
+            
+                    
+                    开枪类的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="Class.html">
+            
+                <a href="Class.html">
+            
+                    
+                    类的方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="Basics.html">
+            
+                <a href="Basics.html">
+            
+                    
+                    基础总结思维导图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../devops/">
+            
+                <a href="../devops/">
+            
+                    
+                    其他工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../devops/mysql.html">
+            
+                <a href="../devops/mysql.html">
+            
+                    
+                    mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../devops/redis.html">
+            
+                <a href="../devops/redis.html">
+            
+                    
+                    redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../devops/MongoDB.html">
+            
+                <a href="../devops/MongoDB.html">
+            
+                    
+                    mongodb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../devops/jupyter.html">
+            
+                <a href="../devops/jupyter.html">
+            
+                    
+                    jupyter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../devops/github.html">
+            
+                <a href="../devops/github.html">
+            
+                    
+                    github
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../devops/gitbook.html">
+            
+                <a href="../devops/gitbook.html">
+            
+                    
+                    gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../devops/golang.html">
+            
+                <a href="../devops/golang.html">
+            
+                    
+                    golang
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >开枪类的使用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <pre><code class="lang-python">
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;&quot;people&quot;&quot;&quot;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,name)</span>:</span>
+        super(Person,self).__init__()
+        self.name = name
+        self.gun = <span class="hljs-keyword">None</span>
+        self.hp = <span class="hljs-number">100</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">anzhuang_zidan</span><span class="hljs-params">(self,dan_jia_temp,zi_dan_temp)</span>:</span>
+        <span class="hljs-comment">#&#x5F39;&#x5939;&#xFF0C;&#x4FDD;&#x5B58;&#x5B50;&#x5F39;&#xFF08;&#x5B50;&#x5F39;&#xFF09;</span>
+        dan_jia_temp.baocun_zidan(zi_dan_temp)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">anzhuang_danjia</span><span class="hljs-params">(self,gun_temp,dan_jia_temp)</span>:</span>
+        <span class="hljs-comment">#&#x5B89;&#x88C5;&#x5F39;&#x5939;</span>
+        gun_temp.baocun_danjia(dan_jia_temp)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">naqiang</span><span class="hljs-params">(self,gun_temp)</span>:</span>
+        self.gun = gun_temp
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__str__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">if</span> self.gun:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;%s&#x7684;&#x8840;&#x91CF;&#x4E3A;&#xFF1A;%d,&#x4ED6;&#x6709;&#x67AA;, %s&quot;</span>%(self.name,self.hp,self.gun)
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">if</span> self.hp&gt;<span class="hljs-number">0</span>:
+                <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;%s&#x7684;&#x8840;&#x91CF;&#x4E3A;%d,&#x5FEB;&#x6302;&#x4E86;&quot;</span>%(self.name,self.hp)
+            <span class="hljs-keyword">else</span>:
+                <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;%s &#x5DF2;&#x6302;&#x3002;&#x3002;&#x3002;&quot;</span>%self.name
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">kou_ban_ji</span><span class="hljs-params">(self,diren)</span>:</span>
+        <span class="hljs-comment"># &#x53D1;&#x5C04;&#x5B50;&#x5F39;</span>
+        self.gun.fire(diren)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">diao_xue</span><span class="hljs-params">(self, sha_shang_li)</span>:</span>
+        self.hp -= sha_shang_li
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Gun</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;&quot;&#x67AA;&#x7C7B;&quot;&quot;&quot;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,name)</span>:</span>
+        super(Gun,self).__init__()
+        self.name = name
+        self.danjia = <span class="hljs-keyword">None</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">baocun_danjia</span><span class="hljs-params">(self,dan_jia_temp)</span>:</span>
+        self.danjia = dan_jia_temp
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__str__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">if</span> self.danjia:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&#x67AA;&#x7684;&#x4FE1;&#x606F;&#xFF1A;%s,%s&quot;</span>%(self.name,self.danjia)
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&#x67AA;&#x7684;&#x4FE1;&#x606F;&#xFF1A;%s,&#x8FD9;&#x628A;&#x67AA;&#x4E2D;&#x6CA1;&#x6709;&#x5F39;&#x5939;&quot;</span> % (self.name)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fire</span><span class="hljs-params">(self,diren)</span>:</span>
+        <span class="hljs-comment">#&#x53D6;&#x51FA;&#x4E00;&#x53D1;&#x5B50;&#x5F39;</span>
+        zidan_temp = self.danjia.tanchu_zidan()
+        <span class="hljs-comment"># &#x4F24;&#x5BB3;&#x654C;&#x4EBA;</span>
+        <span class="hljs-keyword">if</span> zidan_temp:
+            zidan_temp.dazhong(diren)
+        <span class="hljs-keyword">else</span>:
+            print(<span class="hljs-string">&quot;&#x5F39;&#x5939;&#x4E2D;&#x6CA1;&#x6709;&#x5B50;&#x5F39;&#x4E86;&#x3002;&#x3002;&#x3002;&quot;</span>)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Danjia</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;&quot;&#x5F39;&#x5939;&quot;&quot;&quot;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,max_num)</span>:</span>
+        super(Danjia,self).__init__()
+        self.max_num = max_num
+        self.zidan_list = [ ]
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">baocun_zidan</span><span class="hljs-params">(self,zi_dan_temp)</span>:</span>
+        self.zidan_list.append(zi_dan_temp)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__str__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&#x5F39;&#x5939;&#x7684;&#x4FE1;&#x606F;&#x4E3A;&#xFF1A; %d/%d&quot;</span>%(len(self.zidan_list),self.max_num)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">tanchu_zidan</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">if</span> self.zidan_list:
+            <span class="hljs-keyword">return</span> self.zidan_list.pop()
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">None</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Zidan</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;&quot;&#x5B50;&#x5F39;&quot;&quot;&quot;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,sha_shang_li)</span>:</span>
+        super(Zidan,self).__init__()
+        self.sha_shang_li = sha_shang_li
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">dazhong</span><span class="hljs-params">(self,diren)</span>:</span>
+        diren.diao_xue(self.sha_shang_li)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    laowang = Person(<span class="hljs-string">&quot;&#x8001;&#x738B;&quot;</span>)
+    ak47 = Gun(<span class="hljs-string">&quot;ak47&quot;</span>)
+    dan_jia = Danjia(<span class="hljs-number">20</span>)
+
+    <span class="hljs-comment"># &#x8001;&#x738B;.&#x5B89;&#x88C5;&#x5B50;&#x5F39;&#x5230;&#x5F39;&#x5939;&#x4E2D;&#xFF0C;&#x5B89;&#x88C5;15&#x6B21;&#x5B50;&#x5F39;&#xFF0C;&#x5B50;&#x5F39;&#x662F;&#x6740;&#x4F24;&#x529B;10&#xFF0C;&#x56E0;&#x4E3A;&#x5F39;&#x5939;&#x4E3A;0&#xFF0C;&#x4E0D;&#x65AD;&#x6DFB;&#x52A0;&#x5B50;&#x5F39;&#x5BF9;&#x8C61;&#x5C31;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x5B50;&#x5F39;&#x3002;</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">15</span>):    
+        zi_dan = Zidan(<span class="hljs-number">10</span>)
+        laowang.anzhuang_zidan(dan_jia,zi_dan)
+
+    <span class="hljs-comment">#&#x8001;&#x738B;.&#x5B89;&#x88C5;&#x5F39;&#x5939;&#x5230;&#x67AA;&#x4E2D;(&#x67AA;&#xFF0C;&#x5F39;&#x5939;)</span>
+    laowang.anzhuang_danjia(ak47,dan_jia)
+
+    <span class="hljs-comment">#print(dan_jia)</span>
+    <span class="hljs-comment">#print(ak47)</span>
+
+    <span class="hljs-comment">#&#x8001;&#x738B;.&#x62FF;&#x67AA;&#xFF08;&#x67AA;&#xFF09;</span>
+    laowang.naqiang(ak47)
+
+    <span class="hljs-comment">#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x654C;&#x4EBA;</span>
+    gebi_laosong = Person(<span class="hljs-string">&quot;&#x9694;&#x58C1;&#x8001;&#x5B8B;&quot;</span>)
+
+    <span class="hljs-comment">#&#x8001;&#x738B;.&#x6263;&#x6273;&#x673A;(&#x9694;&#x58C1;&#x8001;&#x5B8B;)</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">8</span>):
+        laowang.kou_ban_ji(gebi_laosong)
+        print(gebi_laosong)
+
+<span class="hljs-keyword">if</span>    __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+    main()
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="scrapy.html" class="navigation navigation-prev " aria-label="Previous page: scrapy">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Class.html" class="navigation navigation-next " aria-label="Next page: 类的方法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"开枪类的使用","level":"1.3.3","depth":2,"next":{"title":"类的方法","level":"1.3.4","depth":2,"path":"python/Class.md","ref":"python/Class.md","articles":[]},"previous":{"title":"scrapy","level":"1.3.2","depth":2,"path":"python/scrapy.md","ref":"python/scrapy.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","decription":null,"pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"felix","variables":{},"title":"felix","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{}},"gitbook":"*","extension":null},"file":{"path":"python/Shoot.md","mtime":"2019-01-14T02:58:42.109Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-14T09:43:23.068Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,598 @@
+### vim
+* 创建 *.sh *.py文件，自动添加头部
+```bash
+# vim /etc/vimrc && source /etc/vimrc
+autocmd BufNewFile *.sh,*.py exec ":call SetTitle()"
+func SetTitle()
+	if &filetype == 'sh'
+		call setline(1,"#! /bin/bash")
+		call setline(2,"")
+	elseif &filetype == 'python'
+		call setline(1,"#! /usr/bin/env python3")
+		call setline(2,"# coding=utf-8")
+		call setline(3,"")
+		call setline(4,"def main():")
+		call setline(5,"")
+		call setline(6,"    pass")
+		call setline(7,"")
+		call setline(8,"")
+		call setline(9,"if __name__ == \"__main__\":")
+		call setline(10,"")
+		call setline(11,"   main()")
+	endif
+endfunc
+```
+### nginx
+* 配置域名自动跳转到Https访问
+```bash
+# vim /usr/local/nginx/conf/nginx.conf
+server {
+listen 80;
+server_name yuor_domain; 
+rewrite ^(.*)$ https://$server_name$1 permanent;
+....
+....
+}
+```
+* 配置 ssl
+```bash
+# vim /usr/local/nginx/conf/nginx.conf
+server {
+	ssl_certificate_key /usr/local/nginx/cert/jeffhardy.cn.key;
+	ssl_certificate /usr/local/nginx/cert/jeffhardy.cn_bundle.crt;
+	....
+}
+```
+* 配置 http 文件下载
+```bash
+# vim /usr/local/nginx/conf/nginx.conf
+location / {
+	autoindex on;
+	autoindex_exact_size on;
+	autoindex_localtime on;
+	charset utf-8;
+}
+```
+* 查看 nginx 进程
+```
+ab -c 100 -n 1000 http://localhost//          多进程访问这个网页
+ps axo pid,cmd,psr | grep nginx
+watch -n0.5 'ps axo pid,cmd,psr | grep nginx'  动态查看 nginx 内核
+```
+* rsync 
+```
+rsync ./ -az root@hkserver:/data/gitbook/
+rsync ./ -av /src /des
+rsync -av /usr/local/nginx/html/ -e "ssh -p xxx" root@hkserver:/data/gitbook/
+```
+* https证书
+```
+Letsencrypt 申请免费的SSL证书
+https://certbot.eff.org/lets-encrypt/centosrhel7-nginx
+https://www.qcloud.com/product/ssl
+
+HTTPS相关检测工具
+https://myssl.com/ssl.html
+
+HTTPS SSL评级网站，查询到下面这个域名支持v4和v6
+https://www.ssllabs.com/ssltest/analyze.html?d=secret.imbusy.me
+```
+*  ps进程pid
+```
+ps -aux  | grep -v grep | grep ping  
+ps -elf                
+
+killall -1 httpd   #数字1
+lsof -i:80
+```
+* top状态
+```
+top 动态查看负载，3分钟更新一次
+1  查看各个内核负载
+M  查看内存占比排序（倒序）
+P  查看cpu占比排序（倒序）
+top -d 2 -n 3 -p 3306  #查找固定进程的情况，每两秒刷新一次，刷新3次
+```
+* pgrep进程
+```
+pgrep -f http   # 查看http相关的进程pid
+pgrep -x httpd    #精确匹配httpd进程pid
+pgrep -ln httpd   #主进程的pid
+pgrep -lo httpd   #最先启动的进程pid
+```
+* cat用法
+```bash
+cat > felix < /etc/passwd    #把/etc/passwd的内容重定向到 felix,从标准输入重定向标准输出到 felix
+
+cat > felix      #从键盘中重定向输出到 felix
+asdf
+asdfsdf
+```
+* EOF是隔断符 ，标准输入追加到 felix
+```bash
+felix   << EOF
+       en
+       conf t
+       interface range f0/0-f0/20  #进入端口，可修改
+       no dot
+       end                  
+       wr
+       exit
+EOF
+```
+* awk
+```bash
+cat data|awk '{sum+=$1} END {print "Sum = ", sum}'
+cat data|awk '{sum+=$1} END {print "Average = ", sum/NR}'
+cat data|awk 'BEGIN {max = 0} {if ($1>max) max=$1 fi} END {print "Max=", max}'
+awk 'BEGIN {min = 1999999} {if ($1<min) min=$1 fi} END {print "Min=", min}'
+```
+* 求参数的大小和平均值
+```bash
+#!/bin/bash
+proc=`basename $0`
+usage()
+{
+    printf "usage: %s data1 ,,, datan\n" "proc"
+}
+if [ $# -lt 3 ];then
+    usage
+    exit 1
+fi
+
+max=$1
+min=$1
+sum=0
+for i in $@
+do
+    [ $max -lt $i ] && max=$i
+    [ $min -gt $i ] && min=$i
+    let sum+=i
+done
+echo "max=$max"
+echo "min=$min"
+echo "ibase=10; scale=2; $sum/$#" | bc
+```
+* sort
+对文本行进行去重并统计重复次数 (uniq命令加-c选项可以实现对重复次数进行统计)  
+$ sort test.txt | uniq -c 
+* cut
+cut命令可以按列操作文本行。
+可以看出前面的重复次数占8个字符，因此，可以用命令cut -c 9- 取出每行第9个及其以后的字符。  
+$ sort test.txt | uniq -c | sort -rn | cut -c 9-  
+
+* 从文本的ip地址中，设置脚本查看ip是否通
+```bash
+ip=$(cat ip.list)
+for ip in $ip;do
+    if  ping -c 1 $ip &> /dev/null; then
+    	 echo $ip >> correct.ip;
+    fi
+done
+echo "ping over" 
+```
+* 查看版本
+```bash
+cat /proc/version
+cat /etc/issue
+uname -a
+cat /etc/redhat_release
+```
+* 网络排除
+设备，ip，网关，路由，vpn,代理，认证，域名解析dns,防火墙等
+
+* linux某个分区异常大小，查看原因
+```
+linux里的文件被删除后，空间没有被释放是因为在Linux系统中.
+通过rm或者文件管理器删除文件将会从文件系统的目录结构上解除链接(unlink)。
+然而如果文件是被打开的(有一个进程正在使用)，那么进程将仍然可以读取该文件，磁盘空间也一直被占用。
+```
+* 解决方法
+```
+1、先df -lh查看一下磁盘使用状况
+2、找到被删除文件所在的分区,eg.opt分区
+3、查看被删除了的所有文件：lsof -n /opt |grep deleted
+ 结果如下：[root@test app]# lsof -n /opt |grep delete
+ sftp-serv  8195      root    5r   REG  104,6 8214888448 786452 /opt/software/resin-pro-3.1.10/log/jvm-app-a.log (deleted)
+4、kill 8195
+5、再运行lsof -n /opt |grep delete，应该没上面的结果了。
+6、再运行df -lh看是不是空间已经释放了？
+```
+
+* 公钥生成与发送
+```
+ssh-keygen
+ssh-copy-id 192.168.1.1   把公钥发到对方
+chmod 600 authorized_keys 设置权限
+ssh -p xxx felix@server   端口变了
+```
+* linux一个主机可以有多个网关吗？
+
+vi /etc/rc.d/rc.local在最后一行添加如下内容：
+    route add default gw 192.168.1.1  #添加默认网关 192.168.1.1
+    route add -net 192.168.1.0/24 gw 192.168.1.1 eth0 #1.0网段走192.168.1.1网关走 eth0为要走的网卡。
+    route add -net 192.168.2.0/24 gw 192.168.2.254 eth1 #2.0网段走2.254网关、通过eth1这个网卡走。
+    route add -net 192.33.0.0/16 gw 192.168.2.254 eth1 #33.0.0网段走 2.254网关、通过eth1网卡走。
+多网卡在主机，设置只有一个网关，其余是添加路由
+
+* 本地仓yum源的配置，服务器的源
+```bash
+#yum的配置文件(/etc/yum.repos.d/*.repo)
+[kyo]       仓库配置名
+name=kyo
+baseurl=file:///iso/cd1
+		file:///iso/cd2
+enabled=1
+gpgcheck=0
+
+#配置网络仓库
+baseurl=http://3.3.3.1/centos1
+http://3.3.3.1/centos2
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo
+```
+* zabbix的监控系统配置
+```
+http://blog.51cto.com/xiaogongju/2084464
+关闭selinux,防火墙，安装数据库，zabbix,zabbix-agent,httpd
+初始化数据库，zabbix网页登录，配置客户端主机监控对象，配置邮件告警和用户。
+```
+* ngix环境配置
+```
+https://www.cnblogs.com/taiyonghai/p/6728707.html
+nginx的编译安装，启动ngix,打开80端口，Nginx的负载简单功能，根据域名指向不同的后端服务器。
+```
+
+* java环境配置，Tomcat环境配置
+```
+https://blog.csdn.net/zzq900503/article/details/51879745
+先安装jdk,就是安装java版本，再安装Tomcat，解压就直接用。
+还有配置环境变量什么的~
+```
+* php 环境配置
+```
+https://www.cnblogs.com/chaochao00o/p/6842753.html
+主要是安装httpd，php,mariaDB,关闭防火墙
+网站文件夹/var/www/html
+```
+* mysql的环境配置
+```
+https://www.cnblogs.com/bookwed/p/5896619.html
+编译安装，修改用户权限，修改配置文件，修改环境变量，测试连接
+```
+* 防火墙 iptable
+```
+service iptables start  
+service iptables stop  
+service iptables save  
+service iptables reload  
+service iptables status  
+chkconfig --list iptables  
+iptables -L INPUT -n --line-numbers  ，通过命令iptables -L也可以查看，本例开通了
+
+先关闭所有的80端口
+开启ip段192.168.1.0/24端的80口
+开启ip段211.123.16.123/24端ip段的80口
+# iptables -I INPUT -p tcp --dport 80 -j DROP 
+# iptables -I INPUT -s 192.168.1.0/24 -p tcp --dport 80 -j ACCEPT
+# iptables -I INPUT -s 211.123.16.123/24 -p tcp --dport 80 -j ACCEPT
+编辑防火墙白名单
+[root@localhost ~]# vim /etc/sysconfig/iptables
+增加下面一行代码
+-A INPUT -p tcp -m state -- state NEW -m tcp --dport 80 -j ACCEPT
+保存退出，重启防火墙
+[root@localhost ~]# service iptables restart
+[root@localhost ~]# service iptables stop
+关闭开机自启动防火墙
+[root@localhost ~]# chkconfig iptables off
+[root@localhost ~]# chkconfig --list|grep ipt
+service iptables save
+#service iptables restart
+```
+* ansible的原理和配置
+```
+yum -y install ansible                               #安装包
+ssh-keygen                                           #生成秘钥，设置可密钥远程
+vim /etc/ansible/hosts                               # 设置定义组，域名，ip，等很多设置
+ansible-doc -l                                       # 列出 Ansible 支持的模块
+ansible-doc ping                                     # 查看该模块帮助信息
+ansible Client -m command -a "free -m"               # 查看 Client 分组主机内存使用情况
+ansible Client -m script -a "/home/test.sh 12 34"    # 远程执行本地脚本
+ansible Client -m shell -a "/home/test.sh"           # 执行远程脚本
+#向 Client 组中主机拷贝 test.sh 到 /tmp 下，属主、组为 root ，权限为 0755
+ansible Client -m copy -a "src=/home/test.sh desc=/tmp/ owner=root group=root mode=0755"  
+ansible Client -m stat -a "path=/etc/syctl.conf"     # 获取远程文件状态信息
+ansible Client -m yum -a "name=curl state=latest"   # yum 模块，安装包
+ansible Client -m cron -a "name='check dirs' hour='5,2' job='ls -alh > /dev/null'"  #任务
+ansible Client -m mount -a "name=/mnt/data src=/dev/sd0 fstype=ext4 opts=ro state=present"  #mount模块
+ansible Client -m service -a "name=nginx state=stoped" #service模块
+# 使用 Ansible-playbook 可以完成一组复杂的动作，例如部署环境、搭建服务、修改配置等。
+```
+* 查看内部网络所有开启的80端口，用脚本写
+```
+for ip in 192.168.6.{0..255};do
+  if telnet $ip 80 &> /dev/null; then
+    echo $ip >> ip.list
+fi
+done
+```
+* nmap工具检测开放端口 
+
+	rpm -ivh nmap-4.11-1.1.x86_64.rpm  
+	nmap 127.0.0.1
+
+* 查看docker日志
+	实时查看docker容器名为s12的最后10行日志
+	$ sudo docker logs -f -t --tail 10 s12
+
+* 打包压缩，不打包某个文件和目录
+
+tar -czvf test.tar.gz * --exclude c.log --exclude logs
+
+* sed
+```
+grep -n abc xxx.txt   包含有abc的一行
+sed -n '9,15p' passwd   第9行到第15行
+sed -n '9p;15p' passwd  第9行和第15行
+tail -n 2 command.txt | head -n 1    最后两行的第一行
+head -c 20 log2014.log    前20个字节
+head -c -32 log2014.log   除了最后32个字节以外的内容
+```
+
+* 堡垒机
+即在一个特定的网络环境下，为了保障网络和数据不受来自外部和内部用户的入侵和破坏，
+而运用各种技术手段实时收集和监控网络环境中每一个组成部分的系统状态、安全事件、网络活动，以便集中报警、记录、分析、处理的一种技术手段。
+
+* zabbix
+
+是一个基于WEB界面的提供分布式系统监视以及网络监视功能的企业级的开源解决方案。
+zabbix能监视各种网络参数，保证服务器系统的安全运营；并提供灵活的通知机制以让系统管理员快速定位/解决存在的各种问题。
+zabbix由2部分构成，zabbix server与可选组件zabbix agent。
+zabbix server可以通过SNMP，zabbix agent，ping，端口监视等方法提供对远程服务器/网络状态的监视，数据收集等功能，
+它可以运行在Linux，Solaris，HP-UX，AIX，Free BSD，Open BSD，OS X等平台上。
+
+* 小记
+```
+yum makecache       centos更新源
+:g/^#/d             删除以#开头的行
+:g/^\s*$/d          删除空行      
+find .| xargs grep -ri "class"        目录下的所有文件中查找字符串
+find .| xargs grep -ri "class" -l     目录下的所有文件中查找字符串,并且只打印出含有该字符串的文件名
+grep -r "test"  /data/reports
+grep -vE "^#|^$" haproxy.cfg
+rpm -qa | grep ruby 
+dpkg -l | grep ruby
+yum list installed | grep ruby
+pip2 list installed | ruby
+whereis ruby
+where ruby
+pstree  打印出分支
+ncdu  查看状态！
+ulimit -c                  服务器常用测试命令
+ulimit -c unlimited
+```
+
+* 使用python发送邮件，这也要邮箱授权码
+
+python3 send_mail.py "805986238@qq.com" sub lalallalal
+```bash
+使用客户端配置发送邮件
+sudo yum install -y mailx sendmail
+vim /etc/mail.rc
+set from=foxin.li@inin88.com
+set smtp=mail.inin88.com
+set smtp-auth-user=foxin.li@inin88.com
+set smtp-auth-password= 邮箱授权码
+set smtp-auth=login
+
+mail -s "Hello from mzone.cc by shell" admin@mzone.cc  空格，后面是内容
+mail -s "them" admin@mzone.cc < mail.txt
+echo "content | mail -s "them" admin@mzone.cc
+```
+* jupyter
+```
+export PATH=$PATH:/home/felix/anaconda/bin  添加环境路径
+
+jupyter 生成密码，基本配置，http://localhost:8888
+jupyter notebook password
+jupyter notebook --generate-config
+
+nohup jupyter notebook --ip=172.16.0.250 &  后台运行
+http://172.16.0.250:8888/tree/  外部访问即可
+```
+* redis
+```bash
+tar -xzvf redis-4.0.9.tar.gz -C /usr/local/src
+make install  编译安装
+cp redis.conf /etc
+redis-server /etc/redis.conf   执行后台服务
+redis-cli       连接服务器
+```
+* VT码
+```
+\033[6;31m Hello World. \033[0m   变红色
+```
+
+$()  是执行里面的命令
+${}  是调用这个变量的值
+$(cd `dirname $0`;echo `pwd`)   表示当前路径
+export Parent_dir=$(dirname $(cd `dirname $0`;echo `pwd`))  
+    导入环境变量，表示当前路径的父路径，即上一层路径
+
+* tmux
+```
+常用到的几个组合键：
+ctrl+b ?            显示快捷键帮助
+ctrl+b 空格键       采用下一个内置布局，这个很有意思，在多屏时，用这个就会将多有屏幕竖着展示
+ctrl+b !            把当前窗口变为新窗口
+* ctrl+b  "           模向分隔窗口
+* ctrl+b %            纵向分隔窗口
+* ctrl+b o            跳到下一个分隔窗口。多屏之间的切换
+* ctrl+b 上下键      上一个及下一个分隔窗口
+* ctrl+b c           创建新窗口
+* ctrl+b n           选择下一个窗口
+* ctrl+b x          关闭某个窗口
+```
+* CDN的全称是Content Delivery 
+Network，即内容分发网络。其基本思路是尽可能避开互联网上有可能影响数据传输速度和稳定
+性的瓶颈和环节，使内容传输的更快、更稳定。通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚
+拟网络，CDN系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新
+导向离用户最近的服务节点上。其目的是使用户可就近取得所需内容，解决 Internet网络拥挤的状况，提高用户访问网站的响应
+速度。
+
+* 批量注释：
+```
+ ctrl + v 选择多行的第一列
+ 按大写 i,进入插入模式
+ 输入 # ，再 esc 两次
+```
+* vim 批量缩进
+1. 光标先移动到需要开始选中的地方
+2. SHIFT + V 这时候已经选中当前行了
+3. 按V的手指松开，SHIFT键不放开，按上下键选中
+4. 接下来就能<，>缩进了
+
+* vim复制代码包含注释时格式会乱掉
+解决办法：
+1. 在拷贝前输入:set paste (这样的话，vim就不会启动自动缩进，而只是纯拷贝粘贴）
+2. 拷贝完成之后，输入:set nopaste (关闭paste)
+set pastetoggle=<F9>
+以后在插入模式下，只要按F9键就可以切换自动缩进。
+ 
+* 修改bash前面的主机名和路径，自定义显示红色的 felix~:
+export PS1="\[\e[35;1m\]felix~: \[\e[0m\]"
+
+* vim匹配删除
+%s/"[0-9][0-9]0000"://g
+```
+ ls  查目录文件信息
+ cd  切换路径
+ tar  打包压缩命令
+ hostnamectl  修改主机名或查看主机名
+ vim   编辑文件或查看文件
+ crontab -e 设置定时任务
+ touch aa  创建aa文件
+ mkdir aa 创建aa文件夹
+ chmod 修改文件权限
+ grep   查找文件位置
+ locate  查找文件位置
+ reboot  重启系统
+ init 0  关闭系统
+ halt   关闭系统
+ service start/stop/status  xx  启用、关闭、查看状态某个服务
+ /etc/init.d/xx  start/stop/status  上同
+ date 查看时间
+ echo  $PATH  查看环境变量
+ cat 查看文件
+ head  查看文件前10行， 可以head -n 20 查看前20行
+ tail  查看文件最后10行  tail -20 查看后20行
+ xx --help   查看xx命令的用法
+ nohup command &   不挂断地运行命令，在后台运行
+```
+* umask 022代表什么意思
+```
+新建文件夹或文件的权限是由所谓基本码减去称之为umask的屏蔽位得到的。
+按照规定：文件夹的基本码是rwxrwxrwx(777)，文件的基本码是rw-rw-rw-(666)
+因此新建文件夹是777-022=755(rwxr-xr-x),新建文件是666-022=644(rw-r–r–)。
+```
+
+* 如何查看某进程所打开的所有文件
+```
+取出该进程的进程号，然后用lsof -p pid查看打开的所有文件。（这里以crond进程为例）
+ps -ef | grep crond |grep -v grep | awk '{print $2}'  得出pid
+lsof -p pid
+```
+
+* 获取eth0网卡上80端口的数据包信息
+ tcpdump -i eth0 port 80
+
+* 将文件/etc/a 下中除了 b文件外的所有文件压缩打包放到/home/a下，名字为a.gz
+tar –exclude /etc/a/b -zPcvf /home/a/a.gz /etc/a
+* 常见端口
+ftp（20和21）、https(443)、smtp(25)、pops(110)、ssh(22)
+* iptable
+iptables -A INPUT -p tcp -s 192.168.1.2 –dport 80 -j ACCEPT   (允许来自192.168.1.2这台主机访问80端口)
+* 在mysql客户端查询工具中，如何获取当前的所有连接进程信息
+mysql> show full processlist;
+
+* 备份日志/var/mylog到ftp,账号 aaa,密码 bbb
+```bash
+#！/bin/bash
+# scrip /root/mylogbak.sh
+bakdir=mylog
+date=`date +%F`
+cd /var
+tar zxf ${bakdir}_${date}.tar.gz ${bakdir}
+sleep 1
+ftp -n << -EOF
+open 192.168.1.1
+user aaa bbb
+put mylog_*.tar.gz
+bye
+EOF
+rm -rf mylog_*.tar.gz
+
+crontab -e
+00 05 * * * /bin/bash /root/mylogbak.sh
+```
+* 守护进程通过nohup ./monitor.sh >> monitor.log 2>&1 & 来启动。
+```bash
+#!/bin/sh
+function daemon()
+{
+    while true
+    do
+        server=`lsof -i:8080`  #服务器占用端口为8080，通过查看8080端口是否占用来判断服务是否启动
+        date=`date "+%Y-%m-%d %H:%M:%S"`
+        if [ ! "$server" ]
+        then
+            echo "$date, webserver is stoped!"
+            nohup sh startserver.sh >> nohup.out 2>&1 &  #通过nohup命令后台运行服务
+            echo "$date, webserver is starting..."
+            sleep 10  #启动后等待10s
+        else
+            echo "$date, webserver is running..."
+        fi
+        sleep 10
+    done
+}
+daemon
+```
+* 备份数据库脚本
+```bash
+#!/bin/bash
+# 数据库认证
+ user=""
+ password=""
+ host=""
+ db_name=""
+# 其它
+ backup_path="/path/to/your/home/_backup/mysql"
+ date=$(date +"%d-%b-%Y")
+# 设置导出文件的缺省权限
+ umask 177
+# Dump数据库到SQL文件
+ mysqldump --user=$user --password=$password --host=$host $db_name > $backup_path/$db_name-$date.sql
+# 删除30天之前的就备份文件
+ find $backup_path/* -mtime +30 -exec rm {} \;
+```
+
+* 导出数据和表结构：
+mysqldump -u用户名 -p密码 数据库名 > 数据库名.sql
+* 导入数据库: 
+mysql -u用户名 -p密码 数据库名 < 数据库名.sql
+
+* 检查远程端口脚本
+```
+#!/bin/sh
+PortNum=`nmap 10.0.0.189 -p 80|grep open|wc -l`
+if [ $PortNum -eq 1 ]
+then
+ echo "mysqld is running."
+else
+ echo "mysqld is stoped."
+fi
+```
+* 重定向
+>/dev/null 2>&1
+会将标准输出，错误输出都重定向至/dev/null，也就是全部丢弃
+

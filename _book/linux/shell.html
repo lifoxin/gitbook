@@ -1,0 +1,634 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>shell · felix</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        <meta name="identifier" content="felix" scheme="ISBN">
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="nginx.html" />
+    
+    
+    <link rel="prev" href="server.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="linux.html">
+            
+                <a href="linux.html">
+            
+                    
+                    linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="server.html">
+            
+                <a href="server.html">
+            
+                    
+                    server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="shell.html">
+            
+                <a href="shell.html">
+            
+                    
+                    shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="nginx.html">
+            
+                <a href="nginx.html">
+            
+                    
+                    nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="iptable.html">
+            
+                <a href="iptable.html">
+            
+                    
+                    iptable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="ansible.html">
+            
+                <a href="ansible.html">
+            
+                    
+                    ansible
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="proxy.html">
+            
+                <a href="proxy.html">
+            
+                    
+                    proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="docker.html">
+            
+                <a href="docker.html">
+            
+                    
+                    docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../python/python.html">
+            
+                <a href="../python/python.html">
+            
+                    
+                    python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../python/django.html">
+            
+                <a href="../python/django.html">
+            
+                    
+                    django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../python/scrapy.html">
+            
+                <a href="../python/scrapy.html">
+            
+                    
+                    scrapy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../python/class.html">
+            
+                <a href="../python/class.html">
+            
+                    
+                    class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../devops/mysql.html">
+            
+                <a href="../devops/mysql.html">
+            
+                    
+                    mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../devops/redis.html">
+            
+                <a href="../devops/redis.html">
+            
+                    
+                    redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../devops/MongoDB.html">
+            
+                <a href="../devops/MongoDB.html">
+            
+                    
+                    mongodb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../devops/jupyter.html">
+            
+                <a href="../devops/jupyter.html">
+            
+                    
+                    jupyter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../devops/github.html">
+            
+                <a href="../devops/github.html">
+            
+                    
+                    github
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../devops/gitbook.html">
+            
+                <a href="../devops/gitbook.html">
+            
+                    
+                    gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../devops/golang.html">
+            
+                <a href="../devops/golang.html">
+            
+                    
+                    golang
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >shell</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="shell">shell</h2>
+<h3 id="&#x5E38;&#x89C1;">&#x5E38;&#x89C1;</h3>
+<pre><code>$()  &#x662F;&#x6267;&#x884C;&#x91CC;&#x9762;&#x7684;&#x547D;&#x4EE4;
+${}  &#x662F;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;
+$(cd `dirname $0`;echo `pwd`)   &#x8868;&#x793A;&#x5F53;&#x524D;&#x8DEF;&#x5F84;
+export Parent_dir=$(dirname $(cd `dirname $0`;echo `pwd`))  
+    &#x5BFC;&#x5165;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x8868;&#x793A;&#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x7684;&#x7236;&#x8DEF;&#x5F84;&#xFF0C;&#x5373;&#x4E0A;&#x4E00;&#x5C42;&#x8DEF;&#x5F84;
+&#x5207;&#x6362;&#x7528;&#x6237;&#x53EA;&#x6267;&#x884C;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#x7684;&#x53EF;&#x4EE5;&#x7528;: su - user -c command
+&#x5207;&#x6362;&#x7528;&#x6237;&#x6267;&#x884C;&#x4E00;&#x4E2A;shell&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x7528;:su - user -s /bin/bash shell.sh
+#!/bin/sh
+user=&quot;webmaster&quot;
+if [ `whoami` != &quot;${user}&quot; ]; then
+        exec su - &quot;${user}&quot; -c &quot;sh /tmp/check.sh&quot;
+        # su - ${user} -c sh /tmp/check.sh
+fi
+</code></pre><h3 id="&#x5907;&#x4EFD;&#x6570;&#x636E;&#x5E93;&#x811A;&#x672C;">&#x5907;&#x4EFD;&#x6570;&#x636E;&#x5E93;&#x811A;&#x672C;</h3>
+<pre><code class="lang-bash"><span class="hljs-meta">#!/bin/bash</span>
+<span class="hljs-comment"># &#x6570;&#x636E;&#x5E93;&#x8BA4;&#x8BC1;</span>
+ user=<span class="hljs-string">&quot;&quot;</span>
+ password=<span class="hljs-string">&quot;&quot;</span>
+ host=<span class="hljs-string">&quot;&quot;</span>
+ db_name=<span class="hljs-string">&quot;&quot;</span>
+<span class="hljs-comment"># &#x5176;&#x5B83;</span>
+ backup_path=<span class="hljs-string">&quot;/path/to/your/home/_backup/mysql&quot;</span>
+ date=$(date +<span class="hljs-string">&quot;%d-%b-%Y&quot;</span>)
+<span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x5BFC;&#x51FA;&#x6587;&#x4EF6;&#x7684;&#x7F3A;&#x7701;&#x6743;&#x9650;</span>
+ <span class="hljs-built_in">umask</span> 177
+<span class="hljs-comment"># Dump&#x6570;&#x636E;&#x5E93;&#x5230;SQL&#x6587;&#x4EF6;</span>
+ mysqldump --user=<span class="hljs-variable">$user</span> --password=<span class="hljs-variable">$passwd</span> --host=<span class="hljs-variable">$host</span> <span class="hljs-variable">$db_name</span> &gt; <span class="hljs-variable">$path</span>/<span class="hljs-variable">$db_name</span>-<span class="hljs-variable">$date</span>.sql
+<span class="hljs-comment"># &#x5220;&#x9664;30&#x5929;&#x4E4B;&#x524D;&#x7684;&#x5C31;&#x5907;&#x4EFD;&#x6587;&#x4EF6;</span>
+ find <span class="hljs-variable">$backup_path</span>/* -mtime +30 -exec rm {} \;
+</code></pre>
+<h3 id="&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;">&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;</h3>
+<pre><code class="lang-bash"><span class="hljs-meta">#!/bin/sh</span>
+<span class="hljs-comment"># nohup ./monitor.sh &gt;&gt; monitor.log 2&gt;&amp;1 &amp;</span>
+<span class="hljs-keyword">function</span> <span class="hljs-function"><span class="hljs-title">daemon</span></span>()
+{
+    <span class="hljs-keyword">while</span> <span class="hljs-literal">true</span>
+    <span class="hljs-keyword">do</span>
+        server=`lsof -i:8080`  <span class="hljs-comment">#&#x670D;&#x52A1;&#x5668;&#x5360;&#x7528;&#x7AEF;&#x53E3;&#x4E3A;8080&#xFF0C;&#x901A;&#x8FC7;&#x67E5;&#x770B;8080&#x7AEF;&#x53E3;&#x662F;&#x5426;&#x5360;&#x7528;&#x6765;&#x5224;&#x65AD;&#x670D;&#x52A1;&#x662F;&#x5426;&#x542F;&#x52A8;</span>
+        date=`date <span class="hljs-string">&quot;+%Y-%m-%d %H:%M:%S&quot;</span>`
+        <span class="hljs-keyword">if</span> [ ! <span class="hljs-string">&quot;<span class="hljs-variable">$server</span>&quot;</span> ]
+        <span class="hljs-keyword">then</span>
+            <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$date</span>, webserver is stoped!&quot;</span>
+            nohup sh startserver.sh &gt;&gt; nohup.out 2&gt;&amp;1 &amp;  <span class="hljs-comment">#&#x901A;&#x8FC7;nohup&#x547D;&#x4EE4;&#x540E;&#x53F0;&#x8FD0;&#x884C;&#x670D;&#x52A1;</span>
+            <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$date</span>, webserver is starting...&quot;</span>
+            sleep 10  <span class="hljs-comment">#&#x542F;&#x52A8;&#x540E;&#x7B49;&#x5F85;10s</span>
+        <span class="hljs-keyword">else</span>
+            <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$date</span>, webserver is running...&quot;</span>
+        <span class="hljs-keyword">fi</span>
+        sleep 10
+    <span class="hljs-keyword">done</span>
+}
+daemon
+
+time=`date <span class="hljs-string">&quot;+%Y-%m-%d %H:%M:%S&quot;</span>`
+server=`ps -ef | grep -v grep |grep shadow`
+usleep=10000
+<span class="hljs-function"><span class="hljs-title">main</span></span>(){
+<span class="hljs-keyword">if</span> [ -z <span class="hljs-string">&quot;<span class="hljs-variable">$server</span>&quot;</span> ]
+<span class="hljs-keyword">then</span>
+    /home/felix/anaconda3/bin/python /home/felix/anaconda3/bin/ssserver -c   \
+    /etc/shadowsocks.json &gt;&gt; /tmp/shadowsock.log 2&gt;&amp;1 &amp;
+<span class="hljs-keyword">else</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$time</span> shadowsock is running&quot;</span> &gt;&gt; /tmp/normal.time
+<span class="hljs-keyword">fi</span>
+}
+main
+<span class="hljs-built_in">wait</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;All is ok&quot;</span>
+<span class="hljs-built_in">exit</span> 0
+</code></pre>
+<h3 id="&#x5907;&#x4EFD;&#x65E5;&#x5FD7;">&#x5907;&#x4EFD;&#x65E5;&#x5FD7;</h3>
+<pre><code class="lang-bash"><span class="hljs-meta">#!/bin/bash</span>
+bakdir=mylog
+date=`date +%F`
+<span class="hljs-built_in">cd</span> /var
+tar zxf <span class="hljs-variable">${bakdir}</span>_<span class="hljs-variable">${date}</span>.tar.gz <span class="hljs-variable">${bakdir}</span>
+sleep 1
+ftp -n &lt;&lt; -EOF
+open 192.168.1.1
+user aaa bbb
+put mylog_*.tar.gz
+<span class="hljs-built_in">bye</span>
+EOF
+rm -rf mylog_*.tar.gz
+
+crontab <span class="hljs-_">-e</span>
+00 05 * * * /bin/bash /root/mylogbak.sh
+</code></pre>
+<h3 id="&#x6C42;&#x53C2;&#x6570;&#x7684;&#x5927;&#x5C0F;&#x548C;&#x5E73;&#x5747;&#x503C;">&#x6C42;&#x53C2;&#x6570;&#x7684;&#x5927;&#x5C0F;&#x548C;&#x5E73;&#x5747;&#x503C;</h3>
+<pre><code class="lang-bash"><span class="hljs-meta">#!/bin/bash</span>
+proc=`basename <span class="hljs-variable">$0</span>`
+<span class="hljs-function"><span class="hljs-title">usage</span></span>()
+{
+    <span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;usage: %s data1 ,,, datan\n&quot;</span> <span class="hljs-string">&quot;proc&quot;</span>
+}
+<span class="hljs-keyword">if</span> [ <span class="hljs-variable">$#</span> <span class="hljs-_">-lt</span> 3 ];<span class="hljs-keyword">then</span>
+    usage
+    <span class="hljs-built_in">exit</span> 1
+<span class="hljs-keyword">fi</span>
+
+max=<span class="hljs-variable">$1</span>
+min=<span class="hljs-variable">$1</span>
+sum=0
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-variable">$@</span>
+<span class="hljs-keyword">do</span>
+    [ <span class="hljs-variable">$max</span> <span class="hljs-_">-lt</span> <span class="hljs-variable">$i</span> ] &amp;&amp; max=<span class="hljs-variable">$i</span>
+    [ <span class="hljs-variable">$min</span> <span class="hljs-_">-gt</span> <span class="hljs-variable">$i</span> ] &amp;&amp; min=<span class="hljs-variable">$i</span>
+    <span class="hljs-built_in">let</span> sum+=i
+<span class="hljs-keyword">done</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;max=<span class="hljs-variable">$max</span>&quot;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;min=<span class="hljs-variable">$min</span>&quot;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;ibase=10; scale=2; <span class="hljs-variable">$sum</span>/<span class="hljs-variable">$#</span>&quot;</span> | bc
+</code></pre>
+<h3 id="check-ip">check ip</h3>
+<pre><code class="lang-bash">ip=$(cat ip.list)
+<span class="hljs-keyword">for</span> ip <span class="hljs-keyword">in</span> <span class="hljs-variable">$ip</span>;<span class="hljs-keyword">do</span>
+    <span class="hljs-keyword">if</span>  ping -c 1 <span class="hljs-variable">$ip</span> &amp;&gt; /dev/null; <span class="hljs-keyword">then</span>
+         <span class="hljs-built_in">echo</span> <span class="hljs-variable">$ip</span> &gt;&gt; correct.ip;
+    <span class="hljs-keyword">fi</span>
+<span class="hljs-keyword">done</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;ping over&quot;</span>
+</code></pre>
+<h3 id="&#x67E5;&#x770B;80&#x7AEF;&#x53E3;">&#x67E5;&#x770B;80&#x7AEF;&#x53E3;</h3>
+<pre><code class="lang-bash"><span class="hljs-keyword">for</span> ip <span class="hljs-keyword">in</span> 192.168.6.{0..255};<span class="hljs-keyword">do</span>
+  <span class="hljs-keyword">if</span> telnet <span class="hljs-variable">$ip</span> 80 &amp;&gt; /dev/null; <span class="hljs-keyword">then</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-variable">$ip</span> &gt;&gt; ip.list
+<span class="hljs-keyword">fi</span>
+<span class="hljs-keyword">done</span>
+</code></pre>
+<h3 id="email">email</h3>
+<pre><code>#&#x4F7F;&#x7528;&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;&#x53D1;&#x9001;&#x90AE;&#x4EF6;
+#&#x683C;&#x5F0F; python3 send_mail.py &quot;805986238@qq.com&quot; sub lalallalal
+
+sudo yum install -y mailx sendmail
+vim /etc/mail.rc
+set from=foxin.li@inin88.com
+set smtp=mail.inin88.com
+set smtp-auth-user=foxin.li@inin88.com
+set smtp-auth-password= &#x90AE;&#x7BB1;&#x6388;&#x6743;&#x7801;
+set smtp-auth=login
+
+mail -s &quot;Hello from mzone.cc by shell&quot; admin@mzone.cc  &#x7A7A;&#x683C;&#xFF0C;&#x540E;&#x9762;&#x662F;&#x5185;&#x5BB9;
+mail -s &quot;them&quot; admin@mzone.cc &lt; mail.txt
+echo &quot;content | mail -s &quot;them&quot; admin@mzone.cc
+</code></pre><h3 id="&#x68C0;&#x67E5;&#x8FDC;&#x7A0B;&#x7AEF;&#x53E3;&#x811A;&#x672C;">&#x68C0;&#x67E5;&#x8FDC;&#x7A0B;&#x7AEF;&#x53E3;&#x811A;&#x672C;</h3>
+<pre><code class="lang-bash"><span class="hljs-meta">#!/bin/sh</span>
+PortNum=`nmap 10.0.0.189 -p 80|grep open|wc <span class="hljs-_">-l</span>`
+<span class="hljs-keyword">if</span> [ <span class="hljs-variable">$PortNum</span> <span class="hljs-_">-eq</span> 1 ]
+<span class="hljs-keyword">then</span>
+ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;mysqld is running.&quot;</span>
+<span class="hljs-keyword">else</span>
+ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;mysqld is stoped.&quot;</span>
+<span class="hljs-keyword">fi</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="server.html" class="navigation navigation-prev " aria-label="Previous page: server">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="nginx.html" class="navigation navigation-next " aria-label="Next page: nginx">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"shell","level":"1.4","depth":1,"next":{"title":"nginx","level":"1.5","depth":1,"path":"linux/nginx.md","ref":"linux/nginx.md","articles":[]},"previous":{"title":"server","level":"1.3","depth":1,"path":"linux/server.md","ref":"linux/server.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","decription":null,"pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"felix","variables":{},"title":"felix","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{}},"gitbook":"*","extension":null},"file":{"path":"linux/shell.md","mtime":"2019-07-23T09:21:38.201Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-27T03:34:11.160Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

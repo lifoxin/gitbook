@@ -1,0 +1,536 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>iptable · felix</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        <meta name="identifier" content="felix" scheme="ISBN">
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ansible.html" />
+    
+    
+    <link rel="prev" href="nginx.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="linux.html">
+            
+                <a href="linux.html">
+            
+                    
+                    linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="server.html">
+            
+                <a href="server.html">
+            
+                    
+                    server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="shell.html">
+            
+                <a href="shell.html">
+            
+                    
+                    shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="nginx.html">
+            
+                <a href="nginx.html">
+            
+                    
+                    nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="iptable.html">
+            
+                <a href="iptable.html">
+            
+                    
+                    iptable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="ansible.html">
+            
+                <a href="ansible.html">
+            
+                    
+                    ansible
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="proxy.html">
+            
+                <a href="proxy.html">
+            
+                    
+                    proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="docker.html">
+            
+                <a href="docker.html">
+            
+                    
+                    docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../python/python.html">
+            
+                <a href="../python/python.html">
+            
+                    
+                    python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../python/django.html">
+            
+                <a href="../python/django.html">
+            
+                    
+                    django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../python/scrapy.html">
+            
+                <a href="../python/scrapy.html">
+            
+                    
+                    scrapy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../python/class.html">
+            
+                <a href="../python/class.html">
+            
+                    
+                    class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../devops/mysql.html">
+            
+                <a href="../devops/mysql.html">
+            
+                    
+                    mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../devops/redis.html">
+            
+                <a href="../devops/redis.html">
+            
+                    
+                    redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../devops/MongoDB.html">
+            
+                <a href="../devops/MongoDB.html">
+            
+                    
+                    mongodb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../devops/jupyter.html">
+            
+                <a href="../devops/jupyter.html">
+            
+                    
+                    jupyter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../devops/github.html">
+            
+                <a href="../devops/github.html">
+            
+                    
+                    github
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../devops/gitbook.html">
+            
+                <a href="../devops/gitbook.html">
+            
+                    
+                    gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../devops/golang.html">
+            
+                <a href="../devops/golang.html">
+            
+                    
+                    golang
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >iptable</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <ul>
+<li>&#x9632;&#x706B;&#x5899; iptable</li>
+</ul>
+<pre><code>service iptables start  
+service iptables stop  
+service iptables save  
+service iptables reload  
+service iptables status  
+
+&#x5173;&#x95ED;&#x6240;&#x6709;&#x7684;80&#x7AEF;&#x53E3;
+&#x5F00;&#x542F;ip&#x6BB5;192.168.1.0/24&#x7AEF;&#x7684;80&#x53E3;
+&#x5F00;&#x542F;ip&#x6BB5;211.123.16.123/24&#x7AEF;ip&#x6BB5;&#x7684;80&#x53E3;
+iptables -I INPUT -p tcp --dport 80 -j DROP 
+iptables -I INPUT -s 192.168.1.0/24 -p tcp --dport 80 -j ACCEPT
+iptables -I INPUT -s 211.123.16.123/24 -p tcp --dport 80 -j ACCEPT
+
+&#x7F16;&#x8F91;&#x9632;&#x706B;&#x5899;&#x767D;&#x540D;&#x5355;
+[root@localhost ~]# vim /etc/sysconfig/iptables
+&#x589E;&#x52A0;&#x4E0B;&#x9762;&#x4E00;&#x884C;&#x4EE3;&#x7801;
+-A INPUT -p tcp -m state -- state NEW -m tcp --dport 80 -j ACCEPT
+
+&#x4FDD;&#x5B58;&#x9000;&#x51FA;&#xFF0C;&#x91CD;&#x542F;&#x9632;&#x706B;&#x5899;
+[root@localhost ~]# service iptables restart
+[root@localhost ~]# service iptables stop
+</code></pre><ul>
+<li>&#x4E3B;&#x673A;&#x7F51;&#x5173;</li>
+</ul>
+<pre><code>&#x591A;&#x7F51;&#x5361;&#x5728;&#x4E3B;&#x673A;&#xFF0C;&#x8BBE;&#x7F6E;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x7F51;&#x5173;&#xFF0C;&#x5176;&#x4F59;&#x662F;&#x6DFB;&#x52A0;&#x8DEF;&#x7531;
+
+vi /etc/rc.d/rc.local&#x5728;&#x6700;&#x540E;&#x4E00;&#x884C;&#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;
+    #&#x6DFB;&#x52A0;&#x9ED8;&#x8BA4;&#x7F51;&#x5173; 192.168.1.1
+    route add default gw 192.168.1.1  
+    #1.0&#x7F51;&#x6BB5;&#x8D70;192.168.1.1&#x7F51;&#x5173;&#x8D70; eth0&#x4E3A;&#x8981;&#x8D70;&#x7684;&#x7F51;&#x5361;&#x3002;
+    route add -net 192.168.1.0/24 gw 192.168.1.1 eth0 
+    #2.0&#x7F51;&#x6BB5;&#x8D70;2.254&#x7F51;&#x5173;&#x3001;&#x901A;&#x8FC7;eth1&#x8FD9;&#x4E2A;&#x7F51;&#x5361;&#x8D70;&#x3002;
+    route add -net 192.168.2.0/24 gw 192.168.2.254 eth1 
+    #3.0&#x7F51;&#x6BB5;&#x8D70; 2.254&#x7F51;&#x5173;&#x3001;&#x901A;&#x8FC7;eth1&#x7F51;&#x5361;&#x8D70;&#x3002;
+    route add -net 192.168.3.0/16 gw 192.168.2.254 eth1
+</code></pre><ul>
+<li><p>&#x7F51;&#x7EDC;&#x6392;&#x9664;</p>
+<ol>
+<li>&#x8BBE;&#x5907;&#xFF0C;ip&#xFF0C;&#x7F51;&#x5173;&#xFF0C;&#x8DEF;&#x7531;&#xFF0C;vpn,&#x4EE3;&#x7406;&#xFF0C;&#x8BA4;&#x8BC1;&#xFF0C;&#x57DF;&#x540D;&#x89E3;&#x6790;dns,&#x9632;&#x706B;&#x5899;&#x7B49;</li>
+</ol>
+</li>
+<li><p>&#x5206;&#x533A;&#x5F02;&#x5E38;</p>
+</li>
+</ul>
+<pre><code>linux&#x91CC;&#x7684;&#x6587;&#x4EF6;&#x88AB;&#x5220;&#x9664;&#x540E;&#xFF0C;&#x7A7A;&#x95F4;&#x6CA1;&#x6709;&#x88AB;&#x91CA;&#x653E;&#x662F;&#x56E0;&#x4E3A;&#x5728;Linux&#x7CFB;&#x7EDF;&#x4E2D;.
+&#x901A;&#x8FC7;rm&#x6216;&#x8005;&#x6587;&#x4EF6;&#x7BA1;&#x7406;&#x5668;&#x5220;&#x9664;&#x6587;&#x4EF6;&#x5C06;&#x4F1A;&#x4ECE;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x4E0A;&#x89E3;&#x9664;&#x94FE;&#x63A5;(unlink)&#x3002;
+&#x7136;&#x800C;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x662F;&#x88AB;&#x6253;&#x5F00;&#x7684;(&#x6709;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x6B63;&#x5728;&#x4F7F;&#x7528;)&#xFF0C;&#x90A3;&#x4E48;&#x8FDB;&#x7A0B;&#x5C06;&#x4ECD;&#x7136;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;&#x8BE5;&#x6587;&#x4EF6;&#xFF0C;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x4E5F;&#x4E00;&#x76F4;&#x88AB;&#x5360;&#x7528;&#x3002;
+
+1. &#x5148;df -lh&#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x78C1;&#x76D8;&#x4F7F;&#x7528;&#x72B6;&#x51B5;
+2. &#x627E;&#x5230;&#x88AB;&#x5220;&#x9664;&#x6587;&#x4EF6;&#x6240;&#x5728;&#x7684;&#x5206;&#x533A;,eg.opt&#x5206;&#x533A;
+3. &#x67E5;&#x770B;&#x88AB;&#x5220;&#x9664;&#x4E86;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#xFF1A;lsof -n /opt |grep deleted
+4. sftp-serv  8195  root  5r  REG  104,6 8214888448 786452 /opt/xxx (deleted)
+5. kill 8195
+6. &#x518D;&#x8FD0;&#x884C;lsof -n /opt |grep delete&#xFF0C;&#x5E94;&#x8BE5;&#x6CA1;&#x4E0A;&#x9762;&#x7684;&#x7ED3;&#x679C;&#x4E86;&#x3002;
+7. &#x518D;&#x8FD0;&#x884C;df -lh&#x770B;&#x662F;&#x4E0D;&#x662F;&#x7A7A;&#x95F4;&#x5DF2;&#x7ECF;&#x91CA;&#x653E;&#x4E86;&#xFF1F;
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="nginx.html" class="navigation navigation-prev " aria-label="Previous page: nginx">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ansible.html" class="navigation navigation-next " aria-label="Next page: ansible">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"iptable","level":"1.6","depth":1,"next":{"title":"ansible","level":"1.7","depth":1,"path":"linux/ansible.md","ref":"linux/ansible.md","articles":[]},"previous":{"title":"nginx","level":"1.5","depth":1,"path":"linux/nginx.md","ref":"linux/nginx.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","decription":null,"pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"felix","variables":{},"title":"felix","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{}},"gitbook":"*","extension":null},"file":{"path":"linux/iptable.md","mtime":"2019-01-15T07:57:31.913Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-27T03:34:11.160Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,884 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>docker · felix</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        <meta name="identifier" content="felix" scheme="ISBN">
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../python/python.html" />
+    
+    
+    <link rel="prev" href="proxy.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="linux.html">
+            
+                <a href="linux.html">
+            
+                    
+                    linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="server.html">
+            
+                <a href="server.html">
+            
+                    
+                    server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="shell.html">
+            
+                <a href="shell.html">
+            
+                    
+                    shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="nginx.html">
+            
+                <a href="nginx.html">
+            
+                    
+                    nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="iptable.html">
+            
+                <a href="iptable.html">
+            
+                    
+                    iptable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="ansible.html">
+            
+                <a href="ansible.html">
+            
+                    
+                    ansible
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="proxy.html">
+            
+                <a href="proxy.html">
+            
+                    
+                    proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="docker.html">
+            
+                <a href="docker.html">
+            
+                    
+                    docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../python/python.html">
+            
+                <a href="../python/python.html">
+            
+                    
+                    python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../python/django.html">
+            
+                <a href="../python/django.html">
+            
+                    
+                    django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../python/scrapy.html">
+            
+                <a href="../python/scrapy.html">
+            
+                    
+                    scrapy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../python/class.html">
+            
+                <a href="../python/class.html">
+            
+                    
+                    class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../devops/mysql.html">
+            
+                <a href="../devops/mysql.html">
+            
+                    
+                    mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../devops/redis.html">
+            
+                <a href="../devops/redis.html">
+            
+                    
+                    redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../devops/MongoDB.html">
+            
+                <a href="../devops/MongoDB.html">
+            
+                    
+                    mongodb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../devops/jupyter.html">
+            
+                <a href="../devops/jupyter.html">
+            
+                    
+                    jupyter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../devops/github.html">
+            
+                <a href="../devops/github.html">
+            
+                    
+                    github
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../devops/gitbook.html">
+            
+                <a href="../devops/gitbook.html">
+            
+                    
+                    gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../devops/golang.html">
+            
+                <a href="../devops/golang.html">
+            
+                    
+                    golang
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >docker</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x5B89;&#x88C5;docker&#x73AF;&#x5883;">&#x5B89;&#x88C5;docker&#x73AF;&#x5883;</h3>
+<p><strong>ubuntu&#x7248;&#x672C;&#x5B89;&#x88C5;</strong></p>
+<pre><code>&#x5B89;&#x88C5;
+
+    yum -y install docker-io 
+
+&#x4FEE;&#x6539;&#x955C;&#x50CF;&#x52A0;&#x901F;
+
+    vi /etc/docker/daemon.json  
+        &quot;registry-mirrors&quot;: [&quot;http://hub-mirror.c.163.com&quot;]   
+</code></pre><p><strong>CentOS&#x7248;&#x672C;&#x5B89;&#x88C5;</strong></p>
+<pre><code>&#x7F51;&#x7EDC;&#x95EE;&#x9898;&#xFF0C;&#x6CA1;&#x6709;&#x5219;&#x5FFD;&#x7565;
+
+    vi /etc/profile
+
+      export http_proxy=http://proxy.example.com:8080
+      export https_proxy=https://proxy.example.com:8080
+
+    source /etc/profile
+
+&#x5378;&#x8F7D;&#x65E7;&#x7248;&#x672C;
+
+    yum remove docker  docker-common docker-selinux docker-engine
+
+&#x66F4;&#x65B0;&#x6E90;
+
+    yum update
+    yum-config-manager --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+
+&#x67E5;&#x770B;&#x53EF;&#x5B89;&#x88C5;&#x7248;&#x672C;&#xFF0C;&#x9009;&#x6700;&#x65B0;&#x7248;
+
+    yum list docker-ce --showduplicates | sort -r  
+    yum install docker-ce-18.06.3.ce
+
+    &#x7C97;&#x66B4;&#x5B89;&#x88C5;
+    #!/bin/bash
+    set -e
+    curl -fsSL https://get.docker.com | sh &amp;&amp;  \
+    curl -L &quot;https://github.com/docker/compose/releases/download/1.23.1/docker-compose \ 
+            -$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose &amp;&amp; \
+    chmod +x /usr/local/bin/docker-compose
+
+&#x67E5;&#x770B;&#x7248;&#x672C;
+
+    docker version
+
+&#x542F;&#x52A8;&#x670D;&#x52A1;
+
+    systemctl start docker
+    systemctl enable docker
+
+docker&#x4EE3;&#x7406;&#xFF0C;&#x6CA1;&#x6709;&#x5219;&#x5FFD;&#x7565;
+
+    vi /lib/systemd/system/docker.service
+
+      [Service]
+      Environment=&quot;HTTP_PROXY=http://proxy.example.com:8080/&quot; \
+      &quot;HTTPS_PROXY=https://proxy.tencent.com:8080/&quot;
+
+    systemctl daemon-reload
+    systemctl restart docker
+
+&#x6D4B;&#x8BD5;docker
+
+    docker search mysql
+</code></pre><h3 id="docker&#x57FA;&#x672C;&#x547D;&#x4EE4;">docker&#x57FA;&#x672C;&#x547D;&#x4EE4;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>docker run --name=xxx image</td>
+<td>&#x521B;&#x5EFA;&#x547D;&#x540D;&#x5BB9;&#x5668;</td>
+</tr>
+<tr>
+<td>docker run --name=felix --link name:alias image</td>
+<td>&#x5BB9;&#x5668;felix&#x5173;&#x8054;name&#x5BB9;&#x5668;</td>
+</tr>
+<tr>
+<td>docker exec -it mysql bash</td>
+<td>&#x8FDB;&#x5165;&#x5BB9;&#x5668;</td>
+</tr>
+<tr>
+<td>docker run -v HostCatalog:ContainerCatalog image</td>
+<td>&#x6302;&#x8F7D;&#x5BB9;&#x5668;&#x76EE;&#x5F55;(&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;)</td>
+</tr>
+<tr>
+<td>docker run -d -v /dbdata --name dbdata image</td>
+<td>&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5377;&#x5BB9;&#x5668;</td>
+</tr>
+<tr>
+<td>docker run -d --volumes-from dbdata image</td>
+<td>&#x5BB9;&#x5668;&#x6302;&#x8F7D;dbdata&#x5BB9;&#x5668;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5377;</td>
+</tr>
+<tr>
+<td>docker rm -v container</td>
+<td>&#x5220;&#x9664;&#x5173;&#x8054;&#x6570;&#x636E;&#x5E93;&#x5BB9;&#x5668;</td>
+</tr>
+<tr>
+<td>docker run -p 3306:3306 -p 8080:80 image</td>
+<td>&#x7AEF;&#x53E3;&#x6620;&#x5C04; &#x5BBF;&#x4E3B;:&#x5BB9;&#x5668;</td>
+</tr>
+<tr>
+<td>docker run -P  image</td>
+<td>&#x968F;&#x673A;&#x7AEF;&#x53E3;&#x6620;&#x5C04;</td>
+</tr>
+<tr>
+<td>docker port container portID</td>
+<td>&#x67E5;&#x770B;&#x5BF9;&#x5E94;&#x6620;&#x5C04;&#x7AEF;&#x53E3;</td>
+</tr>
+<tr>
+<td>docker run -it --rm image /bin/bash</td>
+<td>&#x8FD0;&#x884C;&#x540E;&#x9000;&#x51FA;&#x5220;&#x9664;&#x5BB9;&#x5668;</td>
+</tr>
+<tr>
+<td>docker ps -a -l</td>
+<td>&#x67E5;&#x770B;&#x5BB9;&#x5668;</td>
+</tr>
+<tr>
+<td>docker inspect  container</td>
+<td>&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>docker start/attach -i container</td>
+<td>&#x542F;&#x52A8;&#x8FDB;&#x5165;&#x5BB9;&#x5668;</td>
+</tr>
+<tr>
+<td>docker rm -f container</td>
+<td>&#x5F3A;&#x5236;&#x5220;&#x9664;&#x5BB9;&#x5668;</td>
+</tr>
+<tr>
+<td>docker rm $(docker ps -a -q)</td>
+<td>&#x5220;&#x9664;&#x505C;&#x6B62;&#x540E;&#x7684;&#x5BB9;&#x5668;</td>
+</tr>
+<tr>
+<td>ctrl + P / ctril + Q</td>
+<td>&#x4ECE;&#x5F53;&#x524D;&#x5BB9;&#x5668;&#x4EA4;&#x4E92;&#x6A21;&#x5F0F;&#x9000;&#x51FA;</td>
+</tr>
+<tr>
+<td>docker run -d container</td>
+<td>&#x540E;&#x53F0;&#x8FD0;&#x884C;&#x5BB9;&#x5668;</td>
+</tr>
+<tr>
+<td>docker logs -tf --tail  container</td>
+<td>&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x65E5;&#x5FD7;</td>
+</tr>
+<tr>
+<td>docker top container</td>
+<td>&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x8FDB;&#x7A0B;</td>
+</tr>
+<tr>
+<td>docker exec container command parameter</td>
+<td>&#x5BB9;&#x5668;&#x6267;&#x884C;&#x547D;&#x4EE4;</td>
+</tr>
+<tr>
+<td>docker stop/kill contaioner</td>
+<td>&#x7ED3;&#x675F;&#x5BB9;&#x5668;</td>
+</tr>
+<tr>
+<td>docker images</td>
+<td>&#x67E5;&#x770B;&#x955C;&#x50CF;</td>
+</tr>
+<tr>
+<td>docker rmi image</td>
+<td>&#x5220;&#x9664;&#x955C;&#x50CF;</td>
+</tr>
+<tr>
+<td>docker search image/tag</td>
+<td>&#x641C;&#x7D22;&#x955C;&#x50CF;</td>
+</tr>
+<tr>
+<td>docker pull image/tag</td>
+<td>&#x62C9;&#x53D6;&#x955C;&#x50CF;</td>
+</tr>
+<tr>
+<td>docker push image/tag</td>
+<td>&#x63A8;&#x9001;&#x955C;&#x50CF;</td>
+</tr>
+<tr>
+<td>docker export container &gt; ubuntu.tar</td>
+<td>&#x5BFC;&#x51FA;&#x5BB9;&#x5668;&#x5FEB;&#x7167;&#x5230;&#x672C;&#x5730;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td>docker import $(cat ubuntu.tar) felix/ubuntu:v1.0</td>
+<td>&#x5BFC;&#x5165;&#x5FEB;&#x7167;&#x4E3A;&#x955C;&#x50CF;</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="&#x5229;&#x7528;&#x6570;&#x636E;&#x5377;&#x5BB9;&#x5668;&#x6765;&#x5907;&#x4EFD;&#x3001;&#x6062;&#x590D;&#x3001;&#x8FC1;&#x79FB;&#x6570;&#x636E;&#x5377;">&#x5229;&#x7528;&#x6570;&#x636E;&#x5377;&#x5BB9;&#x5668;&#x6765;&#x5907;&#x4EFD;&#x3001;&#x6062;&#x590D;&#x3001;&#x8FC1;&#x79FB;&#x6570;&#x636E;&#x5377;</h3>
+<p><strong>&#x5907;&#x4EFD;</strong></p>
+<p>docker run -d -v /dbdata --name dbdata training/postgres</p>
+<p>docker run --volumes-from dbdata -v $(pwd):/backup ubuntu tar cvf /backup/backup.tar /dbdata</p>
+<p><strong>&#x6062;&#x590D;</strong></p>
+<p>docker run -v /dbdata --name dbdata2 ubuntu</p>
+<p>docker run --volumes-from dbdata2 -v $(pwd):/backup busybox tar xvf /backup/backup.tar</p>
+<p><strong>&#x9A8C;&#x8BC1;</strong></p>
+<p>docker run --volumes-from dbdata2 busybox /bin/ls /dbdata</p>
+<hr>
+<h3 id="&#x642D;&#x5EFA;wordpress&#x535A;&#x5BA2;">&#x642D;&#x5EFA;WordPress&#x535A;&#x5BA2;</h3>
+<p><strong>&#x521B;&#x5EFA;docker&#x535A;&#x5BA2;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</strong></p>
+<pre><code>mkdir myweb &amp;&amp; cd myweb 
+vim docker-compose.yaml
+
+version: &apos;3.1&apos;
+services:
+wordpress:
+image: wordpress
+restart: always
+volumes:
+    - ./website:/var/www/html #&#x672C;&#x5730;&#xFF1A;&#x5BB9;&#x5668;
+ports:
+    - 80:80
+environment:
+    WORDPRESS_DB_HOST: db #&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5730;&#x5740;,&#x5FC5;&#x987B;&#x8981;&#x7528;&#x4F9D;&#x8D56;&#x7684;&#x670D;&#x52A1;&#x7684;&#x540D;&#x5B57;,&#x8FD9;&#x91CC;&#x662F; db
+    WORDPRESS_DB_USER: root #&#x4F60;&#x81EA;&#x5B9A;&#x4E49;&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#x7684;&#x7528;&#x6237;&#x540D;,&#x4F46;&#x9700;&#x8981;&#x548C;&#x4E0B;&#x9762;&#x7684;mysql&#x8BBE;&#x7F6E;&#x7684;&#x8981;&#x4E00;&#x81F4;
+    WORDPRESS_DB_PASSWORD: mysqlpass #&#x4F60;&#x81EA;&#x5B9A;&#x4E49;&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5BC6;&#x7801;,&#x4F46;&#x9700;&#x8981;&#x548C;&#x4E0B;&#x9762;&#x7684;mysql&#x8BBE;&#x7F6E;&#x7684;&#x8981;&#x4E00;&#x81F4;
+    WORDPRESS_DB_NAME: exampledb #&#x4F60;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x6570;&#x636E;&#x5E93;&#x540D;&#x5B57;,&#x4F46;&#x9700;&#x8981;&#x548C;&#x4E0B;&#x9762;&#x7684;mysql&#x8BBE;&#x7F6E;&#x7684;&#x8981;&#x4E00;&#x81F4;
+db:
+image: mysql:5.7
+restart: always
+volumes:
+    - ./mysql_data/data:/var/lib/mysql 
+environment:
+    MYSQL_DATABASE: exampledb #&#x6570;&#x636E;&#x5E93;&#x540D;&#x5B57;
+    MYSQL_USER: exampleuser #&#x6570;&#x636E;&#x5E93;&#x7528;&#x6237;&#x540D;
+    MYSQL_ROOT_PASSWORD: mysqlpass #&#x6570;&#x636E;&#x5E93;&#x5BC6;&#x7801;
+</code></pre><p><strong>&#x8FD0;&#x884C;</strong></p>
+<pre><code>docker-compose up -d
+</code></pre><hr>
+<h3 id="dockerfile">Dockerfile</h3>
+<p>&#x4F7F;&#x7528; Dockerfile &#x53EF;&#x4EE5;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x955C;&#x50CF;&#x3002;</p>
+<p><strong>&#x57FA;&#x672C;&#x7ED3;&#x6784;</strong></p>
+<p>Dockerfile &#x7531;&#x4E00;&#x884C;&#x884C;&#x547D;&#x4EE4;&#x8BED;&#x53E5;&#x7EC4;&#x6210;&#xFF0C;&#x5E76;&#x4E14;&#x652F;&#x6301;&#x4EE5; # &#x5F00;&#x5934;&#x7684;&#x6CE8;&#x91CA;&#x884C;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x7684;&#xFF0C;Dockerfile &#x5206;&#x4E3A;&#x56DB;&#x90E8;&#x5206;&#xFF1A;&#x57FA;&#x7840;&#x955C;&#x50CF;&#x4FE1;&#x606F;&#x3001;&#x7EF4;&#x62A4;&#x8005;&#x4FE1;&#x606F;&#x3001;&#x955C;&#x50CF;&#x64CD;&#x4F5C;&#x6307;&#x4EE4;&#x548C;&#x5BB9;
+&#x5668;&#x542F;&#x52A8;&#x65F6;&#x6267;&#x884C;&#x6307;&#x4EE4;&#x3002;</p>
+<p>&#x4F8B;&#x5982;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># This dockerfile uses the ubuntu image</span>
+
+<span class="hljs-comment"># Base image to use, this must be set as the first line</span>
+FROM ubuntu
+
+<span class="hljs-comment"># Maintainer: docker_user &lt;docker_user at email.com&gt; (@docker_user)</span>
+MAINTAINER docker_user docker_user@email.com
+
+<span class="hljs-comment"># Commands to update the image</span>
+RUN <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;deb http://archive.ubuntu.com/ubuntu/raring/main/universe&quot;</span> &gt;&gt; /etc/apt/sources.list
+RUN apt-get update &amp;&amp; apt-get install -y nginx
+RUN <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;\ndaemon off;&quot;</span> &gt;&gt; /etc/nginx/nginx.conf
+<span class="hljs-comment"># Commands when creating a new container</span>
+CMD /usr/sbin/nginx
+</code></pre>
+<p>&#x5176;&#x4E2D;&#xFF0C;&#x4E00;&#x5F00;&#x59CB;&#x5FC5;&#x987B;&#x6307;&#x660E;&#x6240;&#x57FA;&#x4E8E;&#x7684;&#x955C;&#x50CF;&#x540D;&#x79F0;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x63A8;&#x8350;&#x8BF4;&#x660E;&#x7EF4;&#x62A4;&#x8005;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x540E;&#x9762;&#x5219;&#x662F;&#x955C;&#x50CF;&#x64CD;&#x4F5C;&#x6307;&#x4EE4;&#xFF0C;&#x4F8B;&#x5982; RUN &#x6307;&#x4EE4;&#xFF0C; RUN &#x6307;&#x4EE4;&#x5C06;&#x5BF9;&#x955C;&#x50CF;&#x6267;&#x884C;&#x8DDF;&#x968F;&#x7684;&#x547D;&#x4EE4;&#x3002;
+&#x6BCF;&#x8FD0;&#x884C;&#x4E00;&#x6761; RUN &#x6307;&#x4EE4;&#xFF0C;&#x955C;&#x50CF;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x4E00;&#x5C42;&#xFF0C;&#x5E76;&#x63D0;&#x4EA4;&#x3002;</p>
+<p>&#x6700;&#x540E;&#x662F; CMD &#x6307;&#x4EE4;&#xFF0C;&#x6765;&#x6307;&#x5B9A;&#x8FD0;&#x884C;&#x5BB9;&#x5668;&#x65F6;&#x7684;&#x64CD;&#x4F5C;&#x547D;&#x4EE4;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x66F4;&#x590D;&#x6742;&#x7684;&#x4F8B;&#x5B50;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># Nginx</span>
+FROM ubuntu
+MAINTAINER Victor Vieux &lt;victor@docker.com&gt;
+RUN apt-get update &amp;&amp; apt-get install -y inotify-tools nginx apache2 openssh-server
+
+<span class="hljs-comment"># Firefox over VNC</span>
+FROM ubuntu
+RUN apt-get update &amp;&amp; apt-get install -y x11vnc xvfb firefox
+RUN mkdir /.vnc
+RUN x11vnc -storepasswd 1234 ~/.vnc/passwd
+<span class="hljs-comment"># Autostart firefox (might not be the best way, but it does the</span>
+trick)
+RUN bash -c <span class="hljs-string">&apos;echo &quot;firefox&quot; &gt;&gt; /.bashrc&apos;</span>
+EXPOSE 5900
+CMD [<span class="hljs-string">&quot;x11vnc&quot;</span>, <span class="hljs-string">&quot;-forever&quot;</span>, <span class="hljs-string">&quot;-usepw&quot;</span>, <span class="hljs-string">&quot;-create&quot;</span>]
+
+<span class="hljs-comment"># Multiple images example</span>
+FROM ubuntu
+RUN <span class="hljs-built_in">echo</span> foo &gt; bar
+<span class="hljs-comment"># Will output something like ===&gt; 907ad6c2736f</span>
+FROM ubuntu
+RUN <span class="hljs-built_in">echo</span> moo &gt; oink
+<span class="hljs-comment"># Will output something like ===&gt; 695d7793cbe4</span>
+<span class="hljs-comment"># You&#x1FBF;ll now have two images, 907ad6c2736f with /bar, and 695d7793cbe4 with /oink.</span>
+</code></pre>
+<p><strong>&#x6307;&#x4EE4;</strong></p>
+<p>&#x6307;&#x4EE4;&#x7684;&#x4E00;&#x822C;&#x683C;&#x5F0F;&#x4E3A; INSTRUCTION arguments &#xFF0C;&#x6307;&#x4EE4;&#x5305;&#x62EC;
+FROM &#x3001; MAINTAINER &#x3001; RUN &#x7B49;&#x3002;</p>
+<h3 id="from">FROM</h3>
+<p>&#x683C;&#x5F0F;&#x4E3A; FROM <image> &#x6216; FROM <image>:<tag> &#x3002;</tag></image></image></p>
+<p>&#x7B2C;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x5FC5;&#x987B;&#x4E3A; FROM &#x6307;&#x4EE4;&#x3002;&#x5E76;&#x4E14;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x540C;&#x4E00;&#x4E2A;Dockerfile&#x4E2D;&#x521B;&#x5EFA;&#x591A;&#x4E2A;&#x955C;&#x50CF;
+&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x591A;&#x4E2A; FROM &#x6307;&#x4EE4;&#xFF08;&#x6BCF;&#x4E2A;&#x955C;&#x50CF;&#x4E00;&#x6B21;&#xFF09;&#x3002;</p>
+<h3 id="maintainer">MAINTAINER</h3>
+<p>&#x683C;&#x5F0F;&#x4E3A; MAINTAINER <name> &#xFF0C;&#x6307;&#x5B9A;&#x7EF4;&#x62A4;&#x8005;&#x4FE1;&#x606F;&#x3002;</name></p>
+<h3 id="run">RUN</h3>
+<p>&#x683C;&#x5F0F;&#x4E3A; RUN <command> &#x6216; RUN [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;] &#x3002;</p>
+<p>&#x524D;&#x8005;&#x5C06;&#x5728; shell &#x7EC8;&#x7AEF;&#x4E2D;&#x8FD0;&#x884C;&#x547D;&#x4EE4;&#xFF0C;&#x5373; /bin/sh -c &#xFF1B;&#x540E;&#x8005;&#x5219;&#x4F7F;&#x7528; exec &#x6267;&#x884C;&#x3002;&#x6307;
+&#x5B9A;&#x4F7F;&#x7528;&#x5176;&#x5B83;&#x7EC8;&#x7AEF;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#xFF0C;&#x4F8B;&#x5982; RUN [&quot;/bin/bash&quot;, &quot;-c&quot;,
+&quot;echo hello&quot;] &#x3002;</p>
+<p>&#x6BCF;&#x6761; RUN &#x6307;&#x4EE4;&#x5C06;&#x5728;&#x5F53;&#x524D;&#x955C;&#x50CF;&#x57FA;&#x7840;&#x4E0A;&#x6267;&#x884C;&#x6307;&#x5B9A;&#x547D;&#x4EE4;&#xFF0C;&#x5E76;&#x63D0;&#x4EA4;&#x4E3A;&#x65B0;&#x7684;&#x955C;&#x50CF;&#x3002;&#x5F53;&#x547D;&#x4EE4;&#x8F83;
+&#x957F;&#x65F6;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; \ &#x6765;&#x6362;&#x884C;&#x3002;</p>
+<h3 id="cmd">CMD</h3>
+<p>&#x652F;&#x6301;&#x4E09;&#x79CD;&#x683C;&#x5F0F;</p>
+<ul>
+<li>CMD [&quot;executable&quot;,&quot;param1&quot;,&quot;param2&quot;] &#x4F7F;&#x7528; exec &#x6267;&#x884C;&#xFF0C;&#x63A8;&#x8350;&#x65B9;&#x5F0F;&#xFF1B;</li>
+<li>CMD command param1 param2 &#x5728; /bin/sh &#x4E2D;&#x6267;&#x884C;&#xFF0C;&#x63D0;&#x4F9B;&#x7ED9;&#x9700;&#x8981;&#x4EA4;&#x4E92;&#x7684;&#x5E94;
+&#x7528;&#xFF1B;</li>
+<li>CMD [&quot;param1&quot;,&quot;param2&quot;] &#x63D0;&#x4F9B;&#x7ED9; ENTRYPOINT &#x7684;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#xFF1B;</li>
+</ul>
+<p>&#x6307;&#x5B9A;&#x542F;&#x52A8;&#x5BB9;&#x5668;&#x65F6;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x6BCF;&#x4E2A; Dockerfile &#x53EA;&#x80FD;&#x6709;&#x4E00;&#x6761; CMD &#x547D;&#x4EE4;&#x3002;&#x5982;&#x679C;&#x6307;&#x5B9A;&#x4E86;
+&#x591A;&#x6761;&#x547D;&#x4EE4;&#xFF0C;&#x53EA;&#x6709;&#x6700;&#x540E;&#x4E00;&#x6761;&#x4F1A;&#x88AB;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x7528;&#x6237;&#x542F;&#x52A8;&#x5BB9;&#x5668;&#x65F6;&#x5019;&#x6307;&#x5B9A;&#x4E86;&#x8FD0;&#x884C;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x5219;&#x4F1A;&#x8986;&#x76D6;&#x6389; CMD &#x6307;&#x5B9A;&#x7684;&#x547D;&#x4EE4;&#x3002;</p>
+<h3 id="expose">EXPOSE</h3>
+<p>&#x683C;&#x5F0F;&#x4E3A; EXPOSE <port> [<port>...] </port></port></p>
+<p>&#x544A;&#x8BC9; Docker &#x670D;&#x52A1;&#x7AEF;&#x5BB9;&#x5668;&#x66B4;&#x9732;&#x7684;&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x4F9B;&#x4E92;&#x8054;&#x7CFB;&#x7EDF;&#x4F7F;&#x7528;&#x3002;&#x5728;&#x542F;&#x52A8;&#x5BB9;&#x5668;&#x65F6;&#x9700;&#x8981;&#x901A;&#x8FC7; -
+P&#xFF0C;Docker &#x4E3B;&#x673A;&#x4F1A;&#x81EA;&#x52A8;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x7AEF;&#x53E3;&#x3002;</p>
+<h3 id="env">ENV</h3>
+<p>&#x683C;&#x5F0F;&#x4E3A; ENV <key> <value> &#x3002; &#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x4F1A;&#x88AB;&#x540E;&#x7EED; RUN &#x6307;&#x4EE4;&#x4F7F;&#x7528;&#xFF0C;
+&#x5E76;&#x5728;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x65F6;&#x4FDD;&#x6301;&#x3002;</value></key></p>
+<p>&#x4F8B;&#x5982;</p>
+<pre><code>ENV PG_MAJOR 9.3
+ENV PG_VERSION 9.3.4
+RUN curl -SL http://example/$PG_VERSION.tar.xz 
+ENV PATH /usr/local/postgres-$PG_MAJOR/bin:$PATH
+</code></pre><h3 id="add">ADD</h3>
+<p>&#x683C;&#x5F0F;&#x4E3A; ADD <src> <dest> &#x3002;</dest></src></p>
+<p>&#x8BE5;&#x547D;&#x4EE4;&#x5C06;&#x590D;&#x5236;&#x6307;&#x5B9A;&#x7684; <src> &#x5230;&#x5BB9;&#x5668;&#x4E2D;&#x7684; <dest> &#x3002; &#x5176;&#x4E2D; <src> &#x53EF;&#x4EE5;&#x662F;
+Dockerfile&#x6240;&#x5728;&#x76EE;&#x5F55;&#x7684;&#x4E00;&#x4E2A;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#xFF1B;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A; URL&#xFF1B;&#x8FD8;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A; tar &#x6587;&#x4EF6;
+&#xFF08;&#x81EA;&#x52A8;&#x89E3;&#x538B;&#x4E3A;&#x76EE;&#x5F55;&#xFF09;&#x3002;</src></dest></src></p>
+<h3 id="copy">COPY</h3>
+<p>&#x683C;&#x5F0F;&#x4E3A; COPY <src> <dest> &#x3002;</dest></src></p>
+<p>&#x590D;&#x5236;&#x672C;&#x5730;&#x4E3B;&#x673A;&#x7684; <src> &#xFF08;&#x4E3A; Dockerfile &#x6240;&#x5728;&#x76EE;&#x5F55;&#x7684;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#xFF09;&#x5230;&#x5BB9;&#x5668;&#x4E2D;&#x7684;</src></p>
+<p><dest> &#x3002;</dest></p>
+<p>&#x5F53;&#x4F7F;&#x7528;&#x672C;&#x5730;&#x76EE;&#x5F55;&#x4E3A;&#x6E90;&#x76EE;&#x5F55;&#x65F6;&#xFF0C;&#x63A8;&#x8350;&#x4F7F;&#x7528; COPY &#x3002;</p>
+<h3 id="ntrypoint">NTRYPOINT</h3>
+<p>&#x4E24;&#x79CD;&#x683C;&#x5F0F;&#xFF1A;</p>
+<ul>
+<li>ENTRYPOINT [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;]</li>
+<li>ENTRYPOINT command param1 param2 &#xFF08;shell&#x4E2D;&#x6267;&#x884C;&#xFF09;&#x3002;</li>
+</ul>
+<p>&#x914D;&#x7F6E;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x540E;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x53EF;&#x88AB; docker run &#x63D0;&#x4F9B;&#x7684;&#x53C2;&#x6570;&#x8986;&#x76D6;&#x3002;</p>
+<p>&#x6BCF;&#x4E2A; Dockerfile &#x4E2D;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A; ENTRYPOINT &#xFF0C;&#x5F53;&#x6307;&#x5B9A;&#x591A;&#x4E2A;&#x65F6;&#xFF0C;&#x53EA;&#x6709;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x8D77;
+&#x6548;&#x3002;</p>
+<h3 id="volume">VOLUME</h3>
+<p>&#x683C;&#x5F0F;&#x4E3A; VOLUME [&quot;/data&quot;] &#x3002;</p>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x4ECE;&#x672C;&#x5730;&#x4E3B;&#x673A;&#x6216;&#x5176;&#x4ED6;&#x5BB9;&#x5668;&#x6302;&#x8F7D;&#x7684;&#x6302;&#x8F7D;&#x70B9;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x6765;&#x5B58;&#x653E;&#x6570;&#x636E;&#x5E93;&#x548C;&#x9700;&#x8981;&#x4FDD;
+&#x6301;&#x7684;&#x6570;&#x636E;&#x7B49;&#x3002;</p>
+<h3 id="user">USER</h3>
+<p>&#x683C;&#x5F0F;&#x4E3A; USER daemon &#x3002;</p>
+<p>&#x6307;&#x5B9A;&#x8FD0;&#x884C;&#x5BB9;&#x5668;&#x65F6;&#x7684;&#x7528;&#x6237;&#x540D;&#x6216; UID&#xFF0C;&#x540E;&#x7EED;&#x7684; RUN &#x4E5F;&#x4F1A;&#x4F7F;&#x7528;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x3002;</p>
+<p>&#x5F53;&#x670D;&#x52A1;&#x4E0D;&#x9700;&#x8981;&#x7BA1;&#x7406;&#x5458;&#x6743;&#x9650;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BE5;&#x547D;&#x4EE4;&#x6307;&#x5B9A;&#x8FD0;&#x884C;&#x7528;&#x6237;&#x3002;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x5728;&#x4E4B;&#x524D;&#x521B;&#x5EFA;
+&#x6240;&#x9700;&#x8981;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A; RUN groupadd -r postgres &amp;&amp; useradd -r -g
+postgres postgres &#x3002;&#x8981;&#x4E34;&#x65F6;&#x83B7;&#x53D6;&#x7BA1;&#x7406;&#x5458;&#x6743;&#x9650;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; gosu &#xFF0C;&#x800C;&#x4E0D;&#x63A8;&#x8350;
+sudo &#x3002;</p>
+<h3 id="workdir">WORKDIR</h3>
+<p>&#x683C;&#x5F0F;&#x4E3A; WORKDIR /path/to/workdir &#x3002;</p>
+<p>&#x4E3A;&#x540E;&#x7EED;&#x7684; RUN &#x3001; CMD &#x3001; ENTRYPOINT &#x6307;&#x4EE4;&#x914D;&#x7F6E;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x591A;&#x4E2A; WORKDIR &#x6307;&#x4EE4;&#xFF0C;&#x540E;&#x7EED;&#x547D;&#x4EE4;&#x5982;&#x679C;&#x53C2;&#x6570;&#x662F;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x5219;&#x4F1A;&#x57FA;&#x4E8E;&#x4E4B;&#x524D;&#x547D;&#x4EE4;
+&#x6307;&#x5B9A;&#x7684;&#x8DEF;&#x5F84;&#x3002;&#x4F8B;&#x5982;</p>
+<pre><code>WORKDIR /a
+WORKDIR b
+WORKDIR c
+RUN pwd
+</code></pre><p>&#x5219;&#x6700;&#x7EC8;&#x8DEF;&#x5F84;&#x4E3A; /a/b/c &#x3002;</p>
+<h3 id="onbuild">ONBUILD</h3>
+<p>&#x683C;&#x5F0F;&#x4E3A; ONBUILD [INSTRUCTION] &#x3002;</p>
+<p>&#x914D;&#x7F6E;&#x5F53;&#x6240;&#x521B;&#x5EFA;&#x7684;&#x955C;&#x50CF;&#x4F5C;&#x4E3A;&#x5176;&#x5B83;&#x65B0;&#x521B;&#x5EFA;&#x955C;&#x50CF;&#x7684;&#x57FA;&#x7840;&#x955C;&#x50CF;&#x65F6;&#xFF0C;&#x6240;&#x6267;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#x6307;&#x4EE4;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;Dockerfile &#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x7684;&#x5185;&#x5BB9;&#x521B;&#x5EFA;&#x4E86;&#x955C;&#x50CF; image-A &#x3002;</p>
+<pre><code>[...]
+ONBUILD ADD . /app/src
+ONBUILD RUN /usr/local/bin/python-build --dir /app/src
+[...]
+</code></pre><p>&#x5982;&#x679C;&#x57FA;&#x4E8E; image-A &#x521B;&#x5EFA;&#x65B0;&#x7684;&#x955C;&#x50CF;&#x65F6;&#xFF0C;&#x65B0;&#x7684;Dockerfile&#x4E2D;&#x4F7F;&#x7528; FROM image-A &#x6307;&#x5B9A;
+&#x57FA;&#x7840;&#x955C;&#x50CF;&#x65F6;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x6267;&#x884C; ONBUILD &#x6307;&#x4EE4;&#x5185;&#x5BB9;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;&#x5728;&#x540E;&#x9762;&#x6DFB;&#x52A0;&#x4E86;&#x4E24;&#x6761;&#x6307;&#x4EE4;&#x3002;</p>
+<pre><code>FROM image-A
+#Automatically run the following
+ADD . /app/src
+RUN /usr/local/bin/python-build --dir /app/src
+</code></pre><p>&#x4F7F;&#x7528; ONBUILD &#x6307;&#x4EE4;&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x63A8;&#x8350;&#x5728;&#x6807;&#x7B7E;&#x4E2D;&#x6CE8;&#x660E;&#xFF0C;&#x4F8B;&#x5982; ruby:1.9-onbuild &#x3002;</p>
+<h3 id="&#x521B;&#x5EFA;&#x955C;&#x50CF;">&#x521B;&#x5EFA;&#x955C;&#x50CF;</h3>
+<p>&#x7F16;&#x5199;&#x5B8C;&#x6210; Dockerfile &#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; docker build &#x547D;&#x4EE4;&#x6765;&#x521B;&#x5EFA;&#x955C;&#x50CF;&#x3002;</p>
+<p>&#x57FA;&#x672C;&#x7684;&#x683C;&#x5F0F;&#x4E3A; docker build [&#x9009;&#x9879;] &#x8DEF;&#x5F84; &#xFF0C;&#x8BE5;&#x547D;&#x4EE4;&#x5C06;&#x8BFB;&#x53D6;&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#x4E0B;&#xFF08;&#x5305;&#x62EC;&#x5B50;
+&#x76EE;&#x5F55;&#xFF09;&#x7684; Dockerfile&#xFF0C;&#x5E76;&#x5C06;&#x8BE5;&#x8DEF;&#x5F84;&#x4E0B;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x53D1;&#x9001;&#x7ED9; Docker &#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x7531;&#x670D;&#x52A1;&#x7AEF;&#x6765;
+&#x521B;&#x5EFA;&#x955C;&#x50CF;&#x3002;&#x56E0;&#x6B64;&#x4E00;&#x822C;&#x5EFA;&#x8BAE;&#x653E;&#x7F6E; Dockerfile &#x7684;&#x76EE;&#x5F55;&#x4E3A;&#x7A7A;&#x76EE;&#x5F55;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;
+.dockerignore &#x6587;&#x4EF6;&#xFF08;&#x6BCF;&#x4E00;&#x884C;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#xFF09;&#x6765;&#x8BA9; Docker &#x5FFD;&#x7565;&#x8DEF;&#x5F84;&#x4E0B;&#x7684;&#x76EE;
+&#x5F55;&#x548C;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x8981;&#x6307;&#x5B9A;&#x955C;&#x50CF;&#x7684;&#x6807;&#x7B7E;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; -t &#x9009;&#x9879;&#xFF0C;&#x4F8B;&#x5982;</p>
+<p>$ sudo docker build -t myrepo/myapp /tmp/test1/</p>
+<hr>
+<h3 id="docker-machine">docker machine</h3>
+<p><strong>&#x4F5C;&#x7528;&#xFF1A;&#x8D1F;&#x8D23;&#x5728;&#x591A;&#x79CD;&#x5E73;&#x53F0;&#x4E0A;&#x5FEB;&#x901F;&#x5B89;&#x88C5;Docker&#x73AF;</strong></p>
+<p><strong>&#x652F;&#x6301;&#x591A;&#x79CD;&#x540E;&#x7AEF;&#x9A71;&#x52A8;&#xFF0C;&#x5305;&#x62EC;&#x865A;&#x62DF;&#x673A;&#x3001;&#x672C;&#x5730;&#x4E3B;&#x673A;&#x548C;&#x4E91;&#x5E73;&#x53F0;</strong></p>
+<p>curl -L <a href="https://github.com/docker/machine/releases/download/v0.3.1-rc1" target="_blank">https://github.com/docker/machine/releases/download/v0.3.1-rc1</a> /docker-machine_linux-amd64 &gt; /usr/local/bin/docker-machine</p>
+<p>chmod +x /usr/local/bin/docker-machine</p>
+<hr>
+<h3 id="docker-swarm">docker swarm</h3>
+<p><strong>&#x4F5C;&#x7528;&#xFF1A;&#x7BA1;&#x7406;&#x96C6;&#x7FA4;</strong></p>
+<p>docker pull swarm</p>
+<p>&#x67E5;&#x770B;&#x7248;&#x672C;</p>
+<p>docker run --rm swarm -v  </p>
+<hr>
+<h3 id="docker-kubernetes">docker Kubernetes</h3>
+<p><strong>&#x4F5C;&#x7528; &#xFF1A;</strong>
+<strong>&#x5728;&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x90E8;&#x7F72;&#xFF0C;&#x8C03;&#x5EA6;&#xFF0C;&#x4F38;&#x7F29;&#x662F;&#x57FA;&#x7840;&#x7684;&#x529F;&#x80FD;</strong></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="proxy.html" class="navigation navigation-prev " aria-label="Previous page: proxy">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../python/python.html" class="navigation navigation-next " aria-label="Next page: python">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"docker","level":"1.9","depth":1,"next":{"title":"python","level":"1.10","depth":1,"path":"python/python.md","ref":"python/python.md","articles":[]},"previous":{"title":"proxy","level":"1.8","depth":1,"path":"linux/proxy.md","ref":"linux/proxy.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","decription":null,"pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"felix","variables":{},"title":"felix","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{}},"gitbook":"*","extension":null},"file":{"path":"linux/docker.md","mtime":"2019-05-08T12:05:56.507Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-27T03:34:11.160Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
